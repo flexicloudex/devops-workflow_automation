@@ -1,0 +1,9 @@
+---
+- name: Start httpd
+  hosts: webserver
+  remote_user: root  
+  tasks:
+   - name: start service
+     service:
+       name: httpd
+       state: started
