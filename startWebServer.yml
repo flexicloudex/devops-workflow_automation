@@ -3,7 +3,7 @@
   hosts: webserver
   remote_user: root  
   tasks:
-   - name: start service
+   - name: start service, if not running
      service:
        name: httpd
-       state: started
+       state: restarted
