@@ -2,6 +2,7 @@
 - name: Test connection
   hosts: webserver
   remote_user: root
+  become: yes
   tasks:
     - name: test connection
       ping:
