@@ -1,0 +1,10 @@
+---
+- name: Stop httpd
+  hosts: webserver
+  remote_user: root  
+  tasks:
+   - name: stop service, if running
+     service:
+       name: httpd
+       state: stopped
+       
